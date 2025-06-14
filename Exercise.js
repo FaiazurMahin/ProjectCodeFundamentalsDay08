@@ -88,6 +88,14 @@ class goblin extends character{
 
 class inventory{
     items=['Healingportions','BoostingAttack','Revive'];
+
+    addItem(itemss){
+        items.push(itemss);
+    }
+    removeItem(itemss){
+        this.items.slice(itemss);
+    }
+    
 }
 
 
