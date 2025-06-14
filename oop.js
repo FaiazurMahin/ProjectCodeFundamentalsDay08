@@ -64,3 +64,49 @@ const Z = new coffee();
 Z.makecoffee();
 
 //inheritance
+
+class vehicles{
+    constructor(make,model){
+        this.make=make;
+        this.model=model;
+        }
+        startengine(){
+            console.log(this.make+"and"+this.model+"'s Engine Started");
+    }
+}
+
+class cars extends vehicles{
+    constructor(make,model,color){
+        super(make,model);
+        this.color=color;
+    }
+    startengine(){
+        return (this.make+" and "+this.model+"'s Engine Started. Color is"+this.color);
+    }
+}
+
+class bike extends vehicles{
+    constructor(make,model,color,seats){
+        super(make,model);
+        this.color=color;
+        this.seats=seats;
+    }
+    startengine(){
+        return (this.make+" and "+this.model+"'s Engine Started. Color is"+this.color+"and"+
+            this.seats+"seats."
+        )
+    }
+}
+
+const A = new cars("Axio",2014,"white");
+const B = new bike("Pulsar",2019,"black",3);
+console.log(A.startengine());
+console.log(B.startengine());
+
+
+//polymorphism--basically inheritance e jei function use kori different, oitai...
+// same function doing different job
+
+
+
+
